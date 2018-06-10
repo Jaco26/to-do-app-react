@@ -17,7 +17,7 @@ class List extends Component {
         <li key={i} style={todo.completed ? completeStyle : incompleteStyle}> 
           {todo.item} &nbsp; Due: {todo.dueDate}
           <button onClick={ () => this.props.completeItem(i)}>
-            Finish
+            {todo.completed ? 'Reopen' : 'Complete'}
           </button> 
           <button onClick={ () => this.props.deleteItem(i)}>Delete</button> 
         </li>

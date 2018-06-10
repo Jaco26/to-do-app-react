@@ -32,7 +32,8 @@ class App extends Component {
     event.preventDefault();
     const { item, dueDate } = this.state.newTodo;
     if (!item || !dueDate) {
-      alert('You must include a "to-do" item AND a "due date"')
+      alert('You must include a "to-do" item AND a "due date"');
+      return;
     }
     this.setState({
       todos: [...this.state.todos, this.state.newTodo],
